@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<h:body>
+	<h1>Cliente</h1>
+	
+	<h:form id="cadCli">
+		<fieldset>
+			<legend>Cadastrar</legend>
+			<h:panelGrid columns="2">
+			
+			<h:outputLabel value="Nome" for="nome" />
+			<h:inputText id="nome" value="#{c}" />			
+			
+			
+			<h:outputLabel value="Sexo" for="sexo" />
+			<h:inputText id="sexo" value="#{clienteBean.cliente.sexo}" />
+			
+			
+			<h:outputLabel value="Data de Nascimento" for="dtNasc" />
+			<h:inputText id="dtNasc" value="#{clienteBean.cliente.dt_nasc}"/>
+			
+			
+			<h:outputLabel value="Telefone" for="tel" />
+			<h:inputText id="tel" value="#{clienteBean.cliente.tel_residencial}"/>
+			
+			
+			<h:outputLabel value="Celular" for="cel" />
+			<h:inputText id="cel" value="#{clienteBean.cliente.tel_celular}"/>
+			
+			
+			<h:outputLabel value="Email" for="email" />
+			<h:inputText id="email" value="#{clienteBean.cliente.email}"/>
+			
+			
+			<h:outputLabel value="Endereço" for="end" />
+			<h:inputText id="end" value="#{clienteBean.cliente.endereco}"/>			
+			
+			
+			<h:message id="msg_xxx" for="cadCli" />
+			</h:panelGrid>
+			
+		</fieldset>
+		<br />
+		<h:commandButton value="Gravar" action="" />
+	</h:form>
+
+
+</h:body>
+</html>
